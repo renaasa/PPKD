@@ -1,0 +1,32 @@
+h1 {
+  text-align: center;
+  color: blue;
+  font-family: "Century Gothic", sans-serif;
+  font-size: 36.67px;
+}
+h2 {
+  text-align: justify;
+  color: green;
+  font-family: "Tahoma", sans-serif;
+}
+h3 {
+  text-align: justify;
+  color: green;
+  font-family: "Tahoma", sans-serif;
+}
+h4 {
+  text-align: justify;
+  color: black;
+  font-family: "Arial", sans-serif;
+}
+p {
+  text-align: justify;
+  color: black;
+  font-family: "Times New Roman";
+}
+.container {
+    background-color: rgb(204, 221, 239);
+    max-width: 800px;
+    padding: 40px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      }

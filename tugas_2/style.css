@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+  font-family: "Tahoma", sans-serif;
+  background-color: #e2f6ff;
+}
+
+nav {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  background-color: #22465e;
+  padding: 12px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+}
+
+nav a:hover {
+  color: #1b262f;
+}
+
+.container {
+  border: 0.1px solid #95c7d8;
+  width: 85%;
+  margin: 0px auto;
+  padding: 20px;
+  backgroung-color: rgb(91, 191, 216);
+}
+
+.profile-head {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.img-profile {
+  width: 150px;
+  height: 150px;
+  border-radius: 100%;
+}
+
+.overview {
+  margin-bottom: 20px;
+}
+
+.overview h3 {
+  text-align: center;
+  font-size: 26.5px;
+  margin-bottom: 12px;
+}
+
+p {
+  text-align: justify;
+}
+
+.container-box {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  padding: 12px;
+}
+
+.box {
+  border: 2px solid black;
+  width: 300px;
+  padding: 15px 20px;
+}
+
+.box h3 {
+  text-align: center;
+  border-bottom: 1px solid black;
+  margin-bottom: 10px;
+  padding-bottom: 5px;
+}
+
+.box ul {
+  list-style-type: square;
+  padding-left: 20px;
+}
+
+@media (max-width: 600px) {
+  .container-box {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .box,
+  iframe {
+    width: 90%;
+  }
+}
+
+footer {
+  background-color: #2c4f69;
+  color: white;
+  padding: 8px;
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+}
+
+footer p {
+  text-align: center;
+}
+
+ .burger {
+        /* ketika layar diperbesar, dia hilang */
+        display: none;
+        /* mengganti bentuk kunsor */
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      @media (max-width: 600px) {
+        /* saat layar dikecilkan, menu jadi kolom (menyesuaikan layar) */
+        nav {
+          flex-direction: column;
+        }
+        nav .burger {
+          display: block;
+          margin-bottom: 10px;
+        }
+        nav a {
+          display: none;
+        }
+        /* membuat menu burger atau yg lainnya muncul dan hilang dengan javascript */
+        nav.show a {
+          display: block;
+        }
+      }

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="burger-menu.js"></script>
+    <title>HTML & CSS</title>
+    <style>
+      .gallery-box {
+        display: flex;
+        justify-content: center;
+        gap: 15px;
+        flex-wrap: wrap;
+        margin-bottom: 60px;
+      }
+
+      .gallery-box img {
+        width: 200px;
+        height: 150px;
+        border-radius: 70%;
+      }
+
+      .burger {
+        /* ketika layar diperbesar, dia hilang */
+        display: none;
+        /* mengganti bentuk kunsor */
+        cursor: pointer;
+        font-size: 24px;
+      }
+
+      @media (max-width: 600px) {
+        /* saat layar dikecilkan, menu jadi kolom (menyesuaikan layar) */
+        nav {
+          flex-direction: column;
+        }
+        nav .burger {
+          display: block;
+          margin-bottom: 10px;
+        }
+        /* untuk menyembunyikan menu di nav a  */
+        nav a {
+          display: none;
+        }
+        /* membuat menu burger atau yg lainnya muncul dan hilang dengan javascript */
+        nav.show a {
+          display: block;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <nav id="menu">
+      <div class="burger" onclick="togleMenu()">≣</div>
+      <a href="homepage.html">Home</a>
+      <a href="">Download CV</a>
+      <a href="contact.html">Contact</a>
+      <a href="about_me.html">About me</a>
+      <a href="gallery.html">Gallery</a>
+    </nav>
+    <div class="container">
+      <div class="gallery-box">
+        <img src="assets/img/aurora_australis.jpg" alt="" />
+        <img src="assets/img/aurora_borealis.jpg" alt="" />
+        <img src="assets/img/dawn.jpg" alt="" />
+        <img src="assets/img/daylight.jpg" alt="" />
+        <img src="assets/img/midnight.jpg" alt="" />
+        <img src="assets/img/midnight_sun.jpg" alt="" />
+        <img src="assets/img/sunset.jpg" alt="" />
+      </div>
+    </div>
+    <footer>
+      <p>Copyright 2025 &copy; Renata Annisa</p>
+    </footer>
+    <script>
+      function togleMenu() {
+        document.getElementById("menu").classList.toggle("show");
+      }
+    </script>
+  </body>
+</html>
